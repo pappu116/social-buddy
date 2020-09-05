@@ -29,20 +29,25 @@ const Comment = (props) => {
     const classes = useStyles();
     const { name, body, id, email } = props.comment;
     //image use api
-    // const photo = `https://i.pravatar.cc/150?img=${id}`
-     const [picture,setPicture] =useState([])
-    const image =`https://jsonplaceholder.typicode.com/photos/${id}`
-    useEffect(() => {
-        fetch(image)
-            .then(res => res.json())
-        .then(data =>setPicture(data))
-    })
-    const {thumbnailUrl} = picture;
+    
+    const image = `https://joeschmoe.io/api/v1/${id}`
+
+    //anothers image api 
+    // const [picture,setPicture] =useState([])
+    // const image =`https://jsonplaceholder.typicode.com/photos/${id}`
+    
+    // useEffect(() => {
+    //     fetch(image)
+    //         .then(res => res.json())
+    //     .then(data =>setPicture(data))
+    // })
+    // const {thumbnailUrl} = picture;
+    
     return (
         <>
      <Card className={classes.root} variant="outlined">
                 <CardContent className="image" >
-                    < img src={thumbnailUrl} alt="" />
+                    < img src={image} alt="" />
                  </CardContent>
              <CardContent className="content.text">
                 <Typography className={classes.title} color="textSecondary">

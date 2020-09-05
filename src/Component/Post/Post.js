@@ -13,11 +13,6 @@ const useStyles = makeStyles({
         margin: '0 auto',
         marginBottom: '10px',
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
   title: {
     fontSize: 14,
   },
@@ -28,7 +23,6 @@ const useStyles = makeStyles({
 const Post = (props) => {
     
     const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
     const { title,id } = props.post;
     return (
         <div>
@@ -43,7 +37,7 @@ const Post = (props) => {
           </CardContent>
         <CardActions >
             <Link to={"/pst/"+id}>
-                  <Button size="small" variant="contained" color="secondary"style={{textDecoration:"none"}}>Learn More</Button>
+                  <Button size="small" variant="contained" color="secondary"style={{textDecoration:"none"}}>Read More</Button>
              </Link>
       </CardActions>
     </Card>

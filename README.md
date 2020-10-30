@@ -6,7 +6,7 @@
 
 ### Live Site Demo
 
-[Demo](https://alquran-b07ed.web.app)
+[Demo](https://friendly-austin-f345cf.netlify.app)
 
 ## Project Features 
 - 👉 added Friend
